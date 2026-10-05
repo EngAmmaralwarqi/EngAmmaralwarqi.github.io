@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Energy Management — Ammar Al-Warqi</title>
+<meta name="description" content="Graduation project portfolio by Ammar Al-Warqi: Smart Energy Management for a Hybrid Solar–Diesel–Battery Microgrid in Rural Yemen.">
+<style>
+:root{
+  --bg:#f6f8fb; --card:#fff; --ink:#172033; --muted:#64748b;
+  --line:#e5e9f0; --accent:#1f5eff; --accent2:#0f3fae;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit}
+.container{width:min(1080px,92%);margin:auto}
+.hero{background:linear-gradient(135deg,#101827,#243b68);color:#fff;padding:70px 0 55px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.78}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:14px 0 18px}
+.hero p{font-size:18px;max-width:760px;color:#e8eefc}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;padding:11px 17px;border-radius:9px;font-weight:700;border:1px solid rgba(255,255,255,.28)}
+.btn.primary{background:#fff;color:#14213b}
+.btn.secondary{color:#fff}
+.cover{background:#fff;border-radius:16px;padding:10px;box-shadow:0 20px 55px rgba(0,0,0,.22)}
+.cover img{display:block;width:100%;border-radius:10px}
+.section{padding:62px 0}
+h2{font-size:30px;margin:0 0 18px}
+.lead{color:var(--muted);max-width:850px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:26px}
+.gallery img{width:100%;display:block;border-radius:14px;border:1px solid var(--line);background:#fff}
+.arch{background:#fff;border:1px solid var(--line);padding:8px;border-radius:14px}
+.image-note{margin:14px 0 0;color:var(--muted);font-size:13px}
+.author{text-align:center;padding-top:28px;padding-bottom:28px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{background:#edf2ff;color:#234aa8;border-radius:999px;padding:6px 10px;font-size:13px;font-weight:700}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}
+.note{background:#fff7e6;border:1px solid #f2d18c;padding:18px;border-radius:12px;color:#654b16}
+footer{padding:34px 0 50px;color:var(--muted);text-align:center}
+@media(max-width:800px){
+  .hero-grid,.gallery,.team{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .hero{padding-top:45px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Graduation Project · Mechatronics Engineering · 2025–2026</div>
+      <h1>Smart Energy Management for a Hybrid Solar–Diesel–Battery Microgrid in Rural Yemen</h1>
+      <p>
+        An integrated microgrid design for rural electrification, combining photovoltaic generation,
+        battery energy storage, diesel backup, rule-based energy management, industrial control,
+        simulation, and supervisory monitoring.
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#overview">Explore Project</a>
+        <a class="btn secondary" href="graduation-project-book-Ammar_alwarqi.pdf" target="_blank" rel="noopener">View Full Project Book</a>
+      </div>
+    </div>
+    <div class="cover"><img src="assets/cover.jpg" alt="Graduation project cover"></div>
+  </div>
+</header>
+
+<main>
+<section id="overview" class="section">
+  <div class="container">
+    <h2>Project Overview</h2>
+    <p class="lead">
+      The project addresses unreliable and costly electricity supply in rural coastal communities in Yemen.
+      It proposes a standalone hybrid microgrid in which PV generation is prioritized, battery storage
+      supports the system when required, and a diesel generator provides backup when renewable generation
+      and allowable battery support are insufficient.
+    </p>
+    <div class="tags">
+      <span class="tag">Hybrid Microgrid</span><span class="tag">Solar PV</span>
+      <span class="tag">Battery Storage</span><span class="tag">Energy Management System</span>
+      <span class="tag">Industrial Control</span><span class="tag">MATLAB / Simulink</span>
+      <span class="tag">PLC</span><span class="tag">IoT Monitoring</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>System Architecture</h2>
+    <p class="lead">
+      The proposed architecture combines approximately 150 kW of PV generation, battery energy storage,
+      a 100 kW diesel generator, a common AC distribution bus, and three prioritized feeders.
+      The EMS coordinates source selection and load allocation according to resource availability and
+      feeder priority.
+    </p>
+    <div class="cards">
+      <div class="card"><h3>PV Generation</h3><p>Primary renewable source used whenever sufficient solar power is available.</p></div>
+      <div class="card"><h3>Battery Storage</h3><p>Buffers renewable variability and supports critical loads during supply deficits.</p></div>
+      <div class="card"><h3>Diesel Backup</h3><p>Activated when PV and allowable battery support cannot preserve critical service.</p></div>
+      <div class="card"><h3>Priority Feeders</h3><p>F1 critical, F2 medium priority, and F3 low priority for controlled load shedding and restoration.</p></div>
+      <div class="card"><h3>EMS & Control</h3><p>Rule-based logic coordinates PV, battery, generator operation, SOC limits, and feeder states.</p></div>
+      <div class="card"><h3>Supervisory Layer</h3><p>Node-RED and a browser-based dashboard provide monitoring and bounded supervisory control.</p></div>
+    </div>
+    <div class="gallery">
+      <div class="arch"><img src="assets/Design Project 1.jpg" alt="Simplified visual illustration of the proposed hybrid microgrid structure"></div>
+      <div class="arch"><img src="assets/Design Project 2.jpg" alt="Simplified visual illustration of the project system design"></div>
+      <div class="arch"><img src="assets/Simulink Design.png" alt="Simplified visual illustration of the Simulink system design"></div>
+    </div>
+    <p class="image-note">Visual illustrations are provided to communicate the project structure and simulation concept; they are not photographs of a field-commissioned installation.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Simulation & Evaluation</h2>
+    <p class="lead">
+      MATLAB scripts and Simulink/Stateflow models were used to represent 24-hour PV and load profiles,
+      EMS decisions, battery SOC behavior, generator commands, and feeder enable signals. The project
+      evaluated representative renewable-dominant, moderate-deficit, and battery-supported operating scenarios.
+    </p>
+    <div class="cards">
+      <div class="card"><h3>Renewable-Dominant Operation</h3><p>PV and battery resources supply the community with minimal or no diesel involvement under favorable conditions.</p></div>
+      <div class="card"><h3>Priority-Based Curtailment</h3><p>Lower-priority feeders are curtailed first while critical service is preserved as far as resources allow.</p></div>
+      <div class="card"><h3>Generator Support</h3><p>The diesel generator acts as a backup resource when PV and allowable battery discharge cannot maintain critical supply.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Control & Monitoring</h2>
+    <p class="lead">
+      The supervisory design connects EMS logic with a Node-RED middleware layer and a browser-based HTML
+      dashboard. The dashboard presents system mode, battery SOC, PV and load values, generator status,
+      feeder states, EMS parameters, and alarms, while bounded control actions are passed through the
+      supervisory interface.
+    </p>
+  </div>
+</section>
+
+
+
+<section class="section author">
+  <div class="container">
+    <h2>Project by Ammar Al-Warqi</h2>
+    <p class="lead">Mechatronics Engineer · Graduation Project, 2025–2026</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Project Scope</h2>
+    <div class="note">
+      The work demonstrates the design, simulation, supervisory implementation, and functional validation
+      of the proposed architecture. Full field commissioning, detailed protection coordination, site
+      acceptance testing, cybersecurity hardening, and long-term field monitoring remain outside the
+      scope of the study.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align:center">
+    <h2>Read the Full Graduation Project</h2>
+    <p class="lead" style="margin:0 auto 20px">
+      The complete project book contains the literature review, requirements analysis, system design,
+      EPLAN documentation, simulation, EMS logic, supervisory architecture, results, conclusions,
+      recommendations, and economic evaluation.
+    </p>
+    <a class="btn" style="background:#172033;color:#fff;border:none" href="graduation-project-book-Ammar_alwarqi.pdf" target="_blank" rel="noopener">Open Full Project Book (PDF)</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">Ammar Al-Warqi · Mechatronics Engineer · Graduation Project 2025–2026</div>
+</footer>
+</body>
+</html>
